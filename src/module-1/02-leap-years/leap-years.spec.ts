@@ -39,4 +39,17 @@ describe('LeapYear', () => {
         // Assert
         expect(result).toBe(expected)
     })
+
+    test('isLeap should returns true when year is 2000', () => {
+        // Arrange
+        const inputYear = 2000;
+
+        const expected = true;
+        // Act
+
+        const result = isLeap(inputYear);
+
+        // Assert
+        expect(result).toBe(expected)
+    })
 })

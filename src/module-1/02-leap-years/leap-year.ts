@@ -13,11 +13,15 @@ const isMultipleOf100 = (inputYear :number) => {
     return (inputYear % MULTIPLE_OF_100) === 0;
 }
 
+const isMultipleOf4ButNot100 = (inputYear :number) => {
+    return isMultipleOf4(inputYear) && !isMultipleOf100(inputYear);
+}
+
 export function isLeap(inputYear :number) : boolean {
     if(isMultipleOf400(inputYear)){
         return true
     }
-    if(isMultipleOf4(inputYear) && !isMultipleOf100(inputYear)){
+    if(isMultipleOf4ButNot100(inputYear)){
         return true;
     }
 
